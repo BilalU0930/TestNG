@@ -68,7 +68,7 @@ public class TC_01_02_03 {
 
         Thread.sleep(2000);
 
-        openSourcePage.streetAddress.sendKeys("Şelale Evleri 205.Sokak No:2/8");
+        openSourcePage.streetAddress.sendKeys("Şelale Evleri 205.Sokak No:8/2");
 
         Thread.sleep(2000);
 
