@@ -68,7 +68,7 @@ public class TC_01_02_03 {
 
         Thread.sleep(2000);
 
-        openSourcePage.streetAddress.sendKeys("Şelale Evleri 205.Sokak No:2/8");
+        openSourcePage.streetAddress.sendKeys("Şelale Evleri 205.Sokak No:8/2");
 
         Thread.sleep(2000);
 
@@ -77,7 +77,7 @@ public class TC_01_02_03 {
         Thread.sleep(2000);
 
         String text2 = "Burdur";
-        String scriptByText2 = "arguments[0].innerText='" + text2 + "';";
+        String scriptByText2 = "arguments[1].innerText='" + text2 + "';";
         jse.executeScript(scriptByText2, openSourcePage.state);
 
         Thread.sleep(2000);
