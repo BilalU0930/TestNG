@@ -7,62 +7,56 @@ import utilities.Driver;
 
 public class OpenSourcePage {
 
-    public OpenSourcePage(){
-
+    public OpenSourcePage() {
         PageFactory.initElements(Driver.getDriver(), this);
-
     }
-    @FindBy(xpath = "//*[text()='Sign In']")
-    public WebElement signInFirst;
-    @FindBy (id = "username")
-    public WebElement usernameS;
-    @FindBy (id = "password")
-    public WebElement passwordS;
-    @FindBy (name = "login")
-    public WebElement singInButton;
-    @FindBy(xpath = "//span[text()='Sign Out']")
-    public WebElement signOutButton;
-    @FindBy(xpath = "(//*[text()='My Account'])[2]")
-    public WebElement MyAccountS;
-    @FindBy(linkText = "Addresses")
-    public WebElement addressButon;
 
-    @FindBy(xpath = "//a[@href='https://hubcomfy.com/my-account-2/edit-address/shipping/']")
-    public WebElement shippingaddButton;
+    @FindBy(xpath = "//*[@class='login inline-type']")
+    public WebElement signInButton;
 
-    @FindBy(xpath = "//*[@class='edit btn btn-link btn-primary btn-underline mb-4']")
+    @FindBy(xpath = "//input[@id='username']")
+    public WebElement usernameTextBox;
+
+    @FindBy(xpath = "//input[@id='password']")
+    public WebElement passwordTextBox;
+
+    @FindBy(xpath = "//button[@class='woocommerce-button button woocommerce-form-login__submit']")
+    public WebElement submitButton;
+
+    @FindBy(xpath = "//a[text()='My Account']")
+    public WebElement myAccount;
+
+    @FindBy(xpath = "//a[text()='Addresses']")
+    public WebElement adresses;
+
+    @FindBy(xpath = "//*[@id=\"main\"]/div/div/div/div/div/div/div/div[3]/div[2]/div/a")
     public WebElement addButton;
 
-    @FindBy(id = "shipping_first_name")
-    public WebElement shippingfirstName;
-    @FindBy(id = "shipping_last_name")
-    public WebElement shippinglastName;
-    @FindBy(id = "shipping_country")
-    public WebElement shippingcountry;
-    @FindBy(id = "shipping_address_1")
-    public WebElement shippingstreet;
+    @FindBy(xpath = "//*[@id='shipping_first_name']")
+    public WebElement firstNameTextbox;
 
-    @FindBy(id="shipping_postcode")
-    public WebElement shippingpostcode;
-    @FindBy(id="shipping_city")
-    public WebElement shippingcity;
-    @FindBy(id="shipping_state")
-    public WebElement shippingprovience;
-    @FindBy(xpath = "//*[@class='btn btn-dark btn-rounded btn-sm']")
-    public WebElement saveAdressButton;
-    @FindBy(xpath = "//*[@class='woocommerce-message alert alert-simple alert-icon alert-close-top alert-success']")
-    public WebElement addreschangedsuccessfully;
+    @FindBy(xpath = "//*[@id='shipping_last_name']")
+    public WebElement lastNameTextbox;
 
-    @FindBy(xpath = "//*[@data-id='shipping_first_name']")
-    public WebElement shippingkayitGorunmeName;
+    @FindBy(xpath = "//select[@id='shipping_country']")
+    public WebElement country;
 
-    @FindBy(xpath = "//*[@data-id='shipping_last_name']")
-    public WebElement shippingkayitGorunmeLastName;
+    @FindBy(xpath = "//input[@id='shipping_company']")
+    public WebElement companyName;
 
-    @FindBy(xpath = "//*[@data-id='shipping_address_1']")
-    public WebElement shippingkayitGorunmeaddreskutu;
+    @FindBy(xpath = "//*[@id='shipping_address_1']")
+    public WebElement streetAddress;
 
-    @FindBy(xpath = "//*[@data-id='shipping_postcode']")
-    public WebElement shippingpostcdeuyari;
+    @FindBy(xpath = "//*[@id='shipping_city']")
+    public WebElement townCity;
+
+    @FindBy(xpath = "//select[@id='shipping_state']")
+    public WebElement state;
+
+    @FindBy(xpath = "//*[@id=\"shipping_postcode\"]")
+    public WebElement postCode;
+
+    @FindBy(xpath = "//*[@id=\"main\"]/div/div/div/div/div/div/div/form/div/p/button")
+    public WebElement shippingSubmit;
 
 }

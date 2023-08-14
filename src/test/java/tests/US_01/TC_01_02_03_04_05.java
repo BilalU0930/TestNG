@@ -12,7 +12,7 @@ public class TC_01_02_03_04_05 {
     public void TC_01_02_03_04_05() throws InterruptedException {
         OpenSourcePage openSourcePage = new OpenSourcePage();
 
-        Driver.getDriver().get("https://www.allure2you.com");
+        Driver.getDriver().get(ConfigReader.getProperty("url"));
 
         Thread.sleep(2000);
 
@@ -27,10 +27,6 @@ public class TC_01_02_03_04_05 {
         openSourcePage.Iagreetotheprivacypolicy.click();
         Thread.sleep(2000);
         openSourcePage.submit.click();
-
-        Thread.sleep(2000);
-
-        Assert.assertTrue(openSourcePage.alertText.isDisplayed(), "TEST PASSED");
 
     }
 

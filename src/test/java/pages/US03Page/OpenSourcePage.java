@@ -41,11 +41,8 @@ public class OpenSourcePage {
     @FindBy(xpath = "//*[@id='billing_last_name']")
     public WebElement lastNameTextbox;
 
-    @FindBy(xpath = "//*[@id=\"billing_country_field\"]/span/span/span[1]/span")
+    @FindBy(xpath = "//select[@id='billing_country']")
     public WebElement country;
-
-    @FindBy(xpath = "//span[text()='Turkey']")
-    public WebElement turkey;
 
     @FindBy(xpath = "//input[@id='billing_company']")
     public WebElement companyName;
@@ -56,7 +53,7 @@ public class OpenSourcePage {
     @FindBy(xpath = "//*[@id='billing_city']")
     public WebElement townCity;
 
-    @FindBy(xpath = "//*[@id=\"billing_state_field\"]/span/span/span[1]/span")
+    @FindBy(xpath = "//select[@id='billing_state']")
     public WebElement state;
 
     @FindBy(xpath = "//*[@id=\"billing_postcode\"]")
